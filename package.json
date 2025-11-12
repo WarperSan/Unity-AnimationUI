@@ -1,26 +1,22 @@
 {
-    "name": "com.dhafinfawwaz.animationui",
-    "version": "1.2.0",
-    "displayName": "AnimationUI",
-    "description": "Usefull Unity tool for animating UI with just drag and drop",
-    "unity": "2021.3",
-    "documentationUrl": "https://github.com/DhafinFawwaz/Unity-AnimationUI",
-    "licensesUrl": "https://github.com/DhafinFawwaz/Unity-AnimationUI/blob/main/LICENSE",
-    "dependencies": {
-      "com.unity.textmeshpro": "3.0.6"
-   },
-    "keywords": [
-        "Unity",
-        "Tween",
-        "Animation",
-        "Animation Sequence",
-        "Tweening Function",
-        "UI",
-        "GUI"
-    ],
-    "author": {
-        "name": "Dhafin Fawwaz Ikramullah",
-        "email": "dhafin.fawwaz@gmail.com",
-        "url": "https://dhafinfawwaz.github.io/"
-    }
+  "name": "com.warpersan.animationui",
+  "version": "0.0.0",
+  "displayName": "Animation UI",
+  "description": "Tool to create UI animation easily with no code",
+  "unity": "6000.0",
+  "unityRelease": "0b5",
+  "dependencies": {},
+  "keywords": [
+    "Unity",
+    "Tween",
+    "Animation",
+    "Animation Sequence",
+    "Tweening Function",
+    "UI",
+    "GUI"
+  ],
+  "author": {
+    "name": "WarperSan (original by Dhafin Fawwaz Ikramullah)",
+    "url": "https://github.com/WarperSan"
+  }
 }
