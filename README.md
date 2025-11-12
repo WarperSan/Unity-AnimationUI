@@ -1,4 +1,5 @@
-![Logo](Images/AnimationUI.png)
+![Logo](Documentation~/Images/AnimationUI.png)
+
 <h1 align="center">AnimationUI</h1>
 
 AnimationUI is a unity tool to create UI animation easily with no code. You can simply drag and drop to create some smooth UI animation. There are some option that you can set such as the easing, duration, etc. It basically consist of a component that has an array of sequence that has an array of task. This may be special for UI, but it's also possible to animate values for non UI component like transform. You can also make a custom sequence for non UI component with UnityEvent including the dynamic one. Adding function to call at certain time or at the end of animation is also possible with code.
@@ -7,12 +8,12 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 ## 🕹️ Demo Preview
 
 <p align="center" width="100%">
-    <img width="49%" src="./Images/PreviewAnimationUI.gif"> 
-    <img width="49%" src="./Images/PreviewSettings.gif"> 
+    <img width="49%" src="Documentation~/Images/PreviewAnimationUI.gif"> 
+    <img width="49%" src="Documentation~/Images/PreviewSettings.gif"> 
 </p>
 <p align="center" width="100%">
-    <img width="49%" src="./Images/PreviewUpgrade.gif"> 
-    <img width="49%" src="./Images/PreviewStart.gif"> 
+    <img width="49%" src="Documentation~/Images/PreviewUpgrade.gif"> 
+    <img width="49%" src="Documentation~/Images/PreviewStart.gif"> 
 </p>
 
 
@@ -31,40 +32,47 @@ AnimationUI is a unity tool to create UI animation easily with no code. You can 
 
 ## 📘 Instruction
 
-![Instruction 1](Images/1.gif)
+![Instruction 1](Documentation~/Images/1.gif)
+
 - Right click -> UI -> Create AnimationUI, or you can just add the AnimationUI Component to a gameObject
 - Choose the kind of sequence you want.
 - If you choose animation, assign the kind of component you want to animate to the inspector of the AnimationUI component.
 <br/>
 
-![Instruction 2](Images/2.gif)
+![Instruction 2](Documentation~/Images/2.gif)
+
 - It's recomended to to to lock the inspector so that animating the values is easier.
 - You can capture the start values by clicking the set start button.
 - You can also capture the end value by changing the value, then clicking the set end button.
 <br/>
 
-![Instruction 3](Images/3.gif)
+![Instruction 3](Documentation~/Images/3.gif)
+
 - Drag the progress bar to see how would the animation look like.
 - You can also play the animation in edit mode, but make sure the scene view is open or the animation might have some lag.
 <br/>
 
-![Instruction 4](Images/4.gif)
+![Instruction 4](Documentation~/Images/4.gif)
+
 - Try looking at the demo for examples. But make sure the "Level1" scene is added in the build settings or you can't load the "Level1" scene
 - There are also progress bars for eace sequence in the left side of the sequence.
 <br/>
 
-![Instruction 5](Images/5.gif)
+![Instruction 5](Documentation~/Images/5.gif)
+
 - Try comparing the upgrade menu and the settings menu of the demo.
 - Notice that those settings position is always relative to the left side or the right side, but then it becomes relative to the middle of the screen.
 - In the upgrade menu of the demo, there's also a similiar scenario with the settings menu.
 - if you're not sure how to create this, you can always capture all variable with the set start or the set end button. One example is when you want to animate Rect Transform with Anchor Presets of stretch. just try enabling all variable and set everything, you might be able to produce a similiar result with the settings or upgrade menu in the demo.
 <br/>
 
-![Instruction 6](Images/6.gif)
+![Instruction 6](Documentation~/Images/6.gif)
+
 - You can create the animation in a short time by utilizing some tricks with Unity built in list in the inspector. For example adding a new sequence will automatically copy the previous, it can be quick if the sequence is similiar with the other. Or doing something like creating many copies of wait sequence before using them.
 <br/>
 
-![Instruction 7](Images/7.png)
+![Instruction 7](Documentation~/Images/7.png)
+
 - With this tool, you can also create sequence that set active all input, play sfx, wait before executing next sequence, set active gameObject, loading scene, and do custom things with UnityEvent with each of them having different color.
 
 ## 🔍 API Reference
@@ -77,6 +85,7 @@ using DhafinFawwaz.AnimationUILib;
 public class Something : MonoBehaviour
 {
     AnimationUI _animationUI;
+
     void DoSomething()
     {
         _animationUI.Play();
@@ -122,20 +131,24 @@ void OnEnable()
     AnimationUI.OnPlaySoundByFile += PlaySoundByFile
     AnimationUI.OnPlaySoundByIndex += PlaySoundByIndex
 }
+
 void OnDisable()
 {
     AnimationUI.OnSetActiveAllInput -= SetActiveAllInput
     AnimationUI.OnPlaySoundByFile -= PlaySoundByFile
     AnimationUI.OnPlaySoundByIndex -= PlaySoundByIndex
 }
+
 void SetActiveAllInput(bool isActive)
 {
     Debug.Log("SetActive");
 }
+
 void PlaySoundByFile(AudioClip clip)
 {
     Debug.Log("Playing " + clip.name);
 }
+
 void PlaySoundByIndex(int index)
 {
     Debug.Log("Playing clip at index " + index.ToString());
@@ -143,6 +156,7 @@ void PlaySoundByIndex(int index)
 ```
 
 ## 📃 Note
+
 - There's still no proper way to disable all input so if you also want to disable input other than mouse and touch, please modify line 9, 14, and 19 of AnimationUICustomizable.cs
 - There's a bonus component for ButtonUI
 - There's also reverse sequence button usefull to go back from other menu.
@@ -153,6 +167,5 @@ void PlaySoundByIndex(int index)
 
 
 ## 📝 License
+
 [MIT](https://choosealicense.com/licenses/mit/)
-
-
