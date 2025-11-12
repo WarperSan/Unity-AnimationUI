@@ -1,7 +1,7 @@
 {
-    "name": "com.warpersan.animationui.Editor",
+    "name": "warpersan.animationui.Editor",
     "rootNamespace": "",
-    "references": [],
+    "references": ["GUID:136f90f2f4e3d0e3fa885c7ab8d9c335"],
     "includePlatforms": [
         "Editor"
     ],
