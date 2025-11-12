@@ -169,3 +169,7 @@ void PlaySoundByIndex(int index)
 ## 📝 License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Credits
+
+`Unity-AnimationUI` originates from [Dhafin Fawwaz Ikramullah](https://dhafinfawwaz.github.io). If you like their work, check them out.
