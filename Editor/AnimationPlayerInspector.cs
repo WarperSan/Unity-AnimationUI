@@ -17,13 +17,13 @@ namespace AnimationUI.Editor
                 return base.CreateInspectorGUI();
 
             var sequences = serializedObject.FindProperty(nameof(AnimationPlayer.sequences));
-            
+
             var root = new VisualElement();
 
             var newListView = new SequenceListView(sequences);
 
             root.Add(newListView);
-            
+
             return root;
         }
     }

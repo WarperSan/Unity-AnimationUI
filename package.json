@@ -1,22 +1,22 @@
 {
-    "name": "com.warpersan.animationui",
-    "version": "0.0.0",
-    "displayName": "Animation UI",
-    "description": "Tool to create UI animation easily with no code",
-    "unity": "6000.0",
-    "unityRelease": "0b5",
-    "dependencies": {},
-    "keywords": [
-        "Unity",
-        "Tween",
-        "Animation",
-        "Animation Sequence",
-        "Tweening Function",
-        "UI",
-        "GUI"
-    ],
-    "author": {
-        "name": "WarperSan (original by Dhafin Fawwaz Ikramullah)",
-        "url": "https://github.com/WarperSan"
-    }
+  "name": "com.warpersan.animationui",
+  "version": "0.0.0",
+  "displayName": "Animation UI",
+  "description": "Tool to create UI animation easily with no code",
+  "unity": "6000.0",
+  "unityRelease": "0b5",
+  "dependencies": {},
+  "keywords": [
+    "Unity",
+    "Tween",
+    "Animation",
+    "Animation Sequence",
+    "Tweening Function",
+    "UI",
+    "GUI"
+  ],
+  "author": {
+    "name": "WarperSan (original by Dhafin Fawwaz Ikramullah)",
+    "url": "https://github.com/WarperSan"
+  }
 }

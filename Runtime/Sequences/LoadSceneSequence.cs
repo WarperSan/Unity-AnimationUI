@@ -19,10 +19,10 @@ namespace AnimationUI.Sequences
         public override IEnumerator Play()
         {
             var operation = SceneManager.LoadSceneAsync(sceneToLoad);
-            
+
             if (operation == null)
                 yield break;
-            
+
             yield return operation;
         }
     }

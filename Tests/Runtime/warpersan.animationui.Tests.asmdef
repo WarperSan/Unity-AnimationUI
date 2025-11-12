@@ -1,16 +1,16 @@
 {
-    "name": "warpersan.animationui.Tests",
-    "rootNamespace": "",
-    "references": [
-        "GUID:136f90f2f4e3d0e3fa885c7ab8d9c335"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "warpersan.animationui.Tests",
+  "rootNamespace": "",
+  "references": [
+    "GUID:136f90f2f4e3d0e3fa885c7ab8d9c335"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }

@@ -13,7 +13,7 @@ namespace AnimationUI.Editor.Elements
     {
         private readonly VisualElement _background;
         private readonly Foldout _foldout;
-        
+
         public SequenceView()
         {
             _background = new VisualElement
@@ -28,12 +28,13 @@ namespace AnimationUI.Editor.Elements
                 }
             };
             Add(_background);
-            
+
             _foldout = new Foldout
             {
                 toggleOnLabelClick = false
             };
             _foldout.contentContainer.style.paddingLeft = 0;
+
             _foldout.RegisterValueChangedCallback(e =>
             {
                 _foldout.contentContainer.style.display = e.newValue ? DisplayStyle.Flex : DisplayStyle.None;
@@ -42,13 +43,13 @@ namespace AnimationUI.Editor.Elements
 
             _background.SendToBack();
         }
-        
+
         /// <summary>
         /// Updates this element to use the given item
         /// </summary>
         public void Bind(SerializedProperty property)
         {
-            var type =  property.managedReferenceFullTypename.Split(' ')[^1].Replace('/', '+');
+            var type = property.managedReferenceFullTypename.Split(' ')[^1].Replace('/', '+');
 
             if (type == typeof(LoadSceneSequence).FullName)
             {
@@ -60,12 +61,18 @@ namespace AnimationUI.Editor.Elements
 
                 _foldout.Add(sceneField);
 
-                SetBackground(new Color(0.6f, 0.3f, 0f, 0.1f));
-                
+                SetBackground(new Color(0.6f,
+                    0.3f,
+                    0f,
+                    0.1f));
+
                 sceneField.TrackPropertyValue(sceneProp, UpdateTitle);
                 UpdateTitle(sceneProp);
 
-                void UpdateTitle(SerializedProperty prop) => SetTitle($"Load '{prop.stringValue}'");
+                void UpdateTitle(SerializedProperty prop)
+                {
+                    SetTitle($"Load '{prop.stringValue}'");
+                }
             }
         }
 
@@ -74,7 +81,10 @@ namespace AnimationUI.Editor.Elements
         /// </summary>
         public void Unbind()
         {
-            SetBackground(new Color(0, 0, 0, 0));
+            SetBackground(new Color(0,
+                0,
+                0,
+                0));
             SetTitle("");
             _foldout.Clear();
         }

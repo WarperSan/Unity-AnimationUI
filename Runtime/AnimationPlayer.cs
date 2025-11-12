@@ -7,7 +7,7 @@ namespace AnimationUI
     public class AnimationPlayer : MonoBehaviour
     {
         [SerializeReference]
-        public Sequence[] sequences = {};
+        public Sequence[] sequences = { };
 
         private void Start()
         {
@@ -17,9 +17,7 @@ namespace AnimationUI
         private IEnumerator Play()
         {
             foreach (var sequence in sequences)
-            {
                 yield return sequence.Play();
-            }
         }
     }
 }

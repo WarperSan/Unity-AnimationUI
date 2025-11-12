@@ -12,12 +12,12 @@ namespace AnimationUI.Editor.Elements
     public class SequenceListView : ListView
     {
         private readonly SerializedProperty _property;
-        
+
         public SequenceListView(SerializedProperty property)
         {
             _property = property;
             headerTitle = "Sequences";
-            
+
             allowAdd = true;
             allowRemove = true;
             showAddRemoveFooter = true;
@@ -33,7 +33,7 @@ namespace AnimationUI.Editor.Elements
             onRemove = OnRemove;
             makeItem = MakeItem;
             bindItem = BindItem;
-            
+
             RefreshList();
         }
 
@@ -48,7 +48,7 @@ namespace AnimationUI.Editor.Elements
 
             itemsSource = list;
         }
-        
+
         private void AddItem(Sequence sequence)
         {
             _property.InsertArrayElementAtIndex(_property.arraySize);
@@ -77,7 +77,7 @@ namespace AnimationUI.Editor.Elements
             RefreshItem(_property.arraySize - 1);
             ScrollToItem(_property.arraySize - 1);
         }
-        
+
         /// <summary>
         /// Called when the user uses the <c>Remove</c> button
         /// </summary>
@@ -85,19 +85,16 @@ namespace AnimationUI.Editor.Elements
         {
             if (itemsSource.Count == 0)
                 return;
-            
+
             RemoveItem(itemsSource.Count - 1);
             ScrollToItem(itemsSource.Count - 1);
         }
-        
+
         /// <summary>
         /// Creates an empty element for the list
         /// </summary>
-        private static VisualElement MakeItem()
-        {
-            return new SequenceView();
-        }
-        
+        private static VisualElement MakeItem() => new SequenceView();
+
         /// <summary>
         /// Updates the element for the item at the given index
         /// </summary>
