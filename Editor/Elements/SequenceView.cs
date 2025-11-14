@@ -1,6 +1,5 @@
 using AnimationUI.Sequences;
 using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -88,7 +87,7 @@ namespace AnimationUI.Editor.Elements
         /// <summary>
         /// Sets the given element as the body of this view
         /// </summary>
-        public void SetBody([CanBeNull] VisualElement content)
+        public void SetBody(VisualElement content)
         {
             if (content == null)
                 _foldout.Clear();
