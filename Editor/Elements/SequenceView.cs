@@ -94,15 +94,20 @@ namespace AnimationUI.Editor.Elements
         /// <summary>
         /// Sets the color of the background
         /// </summary>
-        private void SetBackground(Color color)
+        public void SetBackground(byte r, byte g, byte b, byte a = 255)
         {
-            _background.style.backgroundColor = color;
+            _background.style.backgroundColor = new Color(
+                r / 255f,
+                g / 255f,
+                b / 255f,
+                a / 255f
+            );
         }
 
         /// <summary>
         /// Sets the title of this element
         /// </summary>
-        private void SetTitle(string title)
+        public void SetTitle(string title)
         {
             _foldout.text = title;
         }
