@@ -49,6 +49,10 @@ namespace AnimationUI.Editor.Elements
         /// </summary>
         public void Bind(SerializedProperty property)
         {
+            SetBackground(0, 0, 0, 0);
+            SetTitle("");
+            SetBody(null);
+            
             var type = property.managedReferenceFullTypename.Split(' ')[^1].Replace('/', '+');
 
             if (type == typeof(LoadSceneSequence).FullName)
@@ -74,19 +78,6 @@ namespace AnimationUI.Editor.Elements
                     SetTitle($"Load '{prop.stringValue}'");
                 }
             }
-        }
-
-        /// <summary>
-        /// Clears this element of any information
-        /// </summary>
-        public void Unbind()
-        {
-            SetBackground(new Color(0,
-                0,
-                0,
-                0));
-            SetTitle("");
-            _foldout.Clear();
         }
 
         #region Utils

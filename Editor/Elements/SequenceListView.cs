@@ -114,7 +114,6 @@ namespace AnimationUI.Editor.Elements
                 return;
             }
 
-            sequenceView.Unbind();
             sequenceView.Bind(serializedProperty);
         }
     }
