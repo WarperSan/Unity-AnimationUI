@@ -55,29 +55,11 @@ namespace AnimationUI.Editor.Elements
             
             var type = property.managedReferenceFullTypename.Split(' ')[^1].Replace('/', '+');
 
-            if (type == typeof(LoadSceneSequence).FullName)
-            {
-                var sceneProp = property.FindPropertyRelative(nameof(LoadSceneSequence.sceneToLoad));
-
-                var sceneField = new PropertyField();
-                sceneField.Bind(property.serializedObject);
-                sceneField.bindingPath = sceneProp.propertyPath;
-
-                _foldout.Add(sceneField);
-
-                SetBackground(new Color(0.6f,
-                    0.3f,
-                    0f,
-                    0.1f));
-
-                sceneField.TrackPropertyValue(sceneProp, UpdateTitle);
-                UpdateTitle(sceneProp);
-
-                void UpdateTitle(SerializedProperty prop)
-                {
-                    SetTitle($"Load '{prop.stringValue}'");
-                }
-            }
+            SequenceViewModifiers.SequenceViewModifier.ModifySequenceView(
+                this,
+                property,
+                type
+            );
         }
 
         #region Utils
