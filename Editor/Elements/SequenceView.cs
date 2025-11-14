@@ -103,6 +103,17 @@ namespace AnimationUI.Editor.Elements
             _foldout.text = title;
         }
 
+        /// <summary>
+        /// Sets the given element as the body of this view
+        /// </summary>
+        public void SetBody([CanBeNull] VisualElement content)
+        {
+            if (content == null)
+                _foldout.Clear();
+            else
+                _foldout.Add(content);
+        }
+
         #endregion
     }
 }
